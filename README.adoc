@@ -5,9 +5,8 @@ link::https://www.vaultproject.io/docs/[公式ドキュメント]
 == 起動してssh
 
 ----
-$ vagrant up
-$ ssh vagrant@192.168.33.11
-passは vagrant
+$ make up
+$ make ssh
 ----
 
 == もしansibleをカスタマイズして再適用したい時

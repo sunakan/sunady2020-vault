@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define :atago do |machine|
     machine.vm.hostname = "atago"
-    machine.vm.network "private_network", ip: "192.168.33.11"
+    machine.vm.network "private_network", ip: "#{ENV['ATAGO_IP']}"
     machine.vm.provider :virtualbox do |vb|
       vb.name = "atago"
     end
