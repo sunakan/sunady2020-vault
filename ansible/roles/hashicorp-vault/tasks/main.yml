@@ -1,0 +1,14 @@
+---
+
+- name: Install unzip
+  package:
+    name: unzip
+    update_cache: yes
+  become: true
+
+- name: Download and install vault binary
+  unarchive:
+    src: "https://releases.hashicorp.com/vault/{{ vault_version }}/vault_{{ vault_version }}_linux_amd64.zip"
+    dest: /usr/bin/
+    remote_src: True
+  become: true

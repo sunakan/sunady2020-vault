@@ -1,0 +1,59 @@
+---
+
+- hosts: all
+  connection: local
+  become: yes
+  gather_facts: True
+
+  roles:
+    - common
+    - docker
+    - hashicorp-consul
+    - hashicorp-vault
+
+#  tasks:
+#  ## Docker
+#  #
+#  - name: Add Docker GPG key
+#    apt_key:
+#      url: https://download.docker.com/linux/ubuntu/gpg
+#  - name: Add Docker APT repository
+#    apt_repository:
+#      repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
+#  - name: Install packages
+#    apt:
+#      state: present
+#      update_cache: yes
+#      name:
+#        - apt-transport-https
+#        - ca-certificates
+#        - curl
+#        - gnupg2
+#        - software-properties-common
+#  - name: Install Docker-CE
+#    apt:
+#      name:
+#        - docker-ce
+#      state: present
+#      update_cache: yes
+#  - name: dockerグループにvagrant userを追加（本番ではこんなことしないように）
+#    user:
+#      name: vagrant
+#      groups: docker
+#
+#
+#  ## Vault
+#  #
+#  - name: Install unzip
+#    package:
+#      name: unzip
+#      update_cache: yes
+#  - name: Download and install vault binary
+#    unarchive:
+#      src: "https://releases.hashicorp.com/vault/{{ vault_version }}/vault_{{ vault_version }}_linux_amd64.zip"
+#      dest: /usr/bin/
+#      remote_src: True
+#  - name: Create vault config directory
+#    file:
+#      state: directory
+#      path: /etc/opt/vault/
