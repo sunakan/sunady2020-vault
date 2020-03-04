@@ -2,6 +2,10 @@
 
 link::https://www.vaultproject.io/docs/[公式ドキュメント]
 
+== VaultとConsulのバージョン
+
+include::./ansible/inventories/group_vars/all.yml[]
+
 == 起動してssh
 
 ----
