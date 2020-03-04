@@ -16,3 +16,9 @@ $ make ssh
 $ vagrant reload
 $ vagrant provision
 ----
+
+== VaultやConsulのバージョンを上げる
+
+----
+$ vim ./ansible/inventories/group_vars/all.yml
+----
