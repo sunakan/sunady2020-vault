@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/vim,linux,macos,emacs,windows,terraform,intellij+all
-# Edit at https://www.gitignore.io/?templates=vim,linux,macos,emacs,windows,terraform,intellij+all
+# Created by https://www.gitignore.io/api/vagrant,vim,linux,macos,emacs,windows,terraform,intellij+all
+# Edit at https://www.gitignore.io/?templates=vagrant,vim,linux,macos,emacs,windows,terraform,intellij+all
 
 ### Emacs ###
 # -*- mode: gitignore; -*-
@@ -211,6 +211,16 @@ override.tf.json
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
 
+### Vagrant ###
+# General
+.vagrant/*
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+# *.log
+
+### Vagrant Patch ###
+*.box
+
 ### Vim ###
 # Swap
 [._]*.s[a-v][a-z]
@@ -261,4 +271,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/vim,linux,macos,emacs,windows,terraform,intellij+all
+# End of https://www.gitignore.io/api/vagrant,vim,linux,macos,emacs,windows,terraform,intellij+all
