@@ -1,0 +1,43 @@
+== vault operator init
+
+----
+$ vault operator init
+Unseal Key 1: si2EqyRrxtD5Jq5/EP3SkDOsgkW0eqfW/0c8VLpGaCew
+Unseal Key 2: J1BtWD/9mEmakDzPPl4z2jXz2QA0Z4GgfoGjSCOrIwP2
+Unseal Key 3: /RR/Un5idiWNIos97HdwqJWvCkl1No+FJTDTCayFON42
+Unseal Key 4: +KLjcWUZ2q5JUp++Yj4+PIo/EDpJM9XVhH0W6d+GU20c
+Unseal Key 5: vylSYvDYrP0iR2C9V9WgnBuika/w8Gs9+O7q5/4ZDWf/
+
+Initial Root Token: 71e1179d-2bca-d156-dd55-1a378fa297f5
+
+Vault initialized with 5 key shares and a key threshold of 3. Please securely
+distribute the key shares printed above. When the Vault is re-sealed,
+restarted, or stopped, you must supply at least 3 of these keys to unseal it
+before it can start servicing requests.
+
+Vault does not store the generated master key. Without at least 3 key to
+reconstruct the master key, Vault will remain permanently sealed!
+
+It is possible to generate new unseal keys, provided you have a quorum of
+existing unseal keys shares. See "vault operator rekey" for more information.
+----
+
+=== 英語部分
+
+----
+Vault initialized with 5 key shares and a key threshold of 3.
+Vaultは、5つのキー共有とキーしきい値3で初期化されました。
+
+Please securely distribute the key shares printed above.
+上記のキー共有を安全に配布してください。
+
+When the Vault is re-sealed, restarted, or stopped, you must supply at least 3 of these keys to unseal it before it can start servicing requests.
+Vaultが再封、再起動、または停止された場合、要求の処理を開始する前に、少なくとも3つのキーを指定して封印を解除する必要があります。
+
+It is possible to generate new unseal keys, provided you have a quorum of existing unseal keys shares. See "vault operator rekey" for more information.
+既存の開封キー共有のクォーラムがある場合は、新しい開封キーを生成できます。詳細については、「vault operator rekey」を参照してください。
+----
+
+=== 疑問点
+
+* unsealしたときの3つのキーは覚えておく必要がある？

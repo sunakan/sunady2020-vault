@@ -26,3 +26,7 @@ $ vagrant provision
 ----
 $ vim ./ansible/inventories/group_vars/all.yml
 ----
+
+== docs
+
+include::./docs/vault-operator-init.adoc[]
