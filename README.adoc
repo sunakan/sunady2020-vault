@@ -1,6 +1,6 @@
 = Hashicorp Vault を触ってみる
 
-link::https://www.vaultproject.io/docs/[公式ドキュメント]
+link:https://www.vaultproject.io/docs/[公式ドキュメント]
 
 == VaultとConsulのバージョン
 
