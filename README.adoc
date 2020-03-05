@@ -2,6 +2,8 @@
 
 link:https://www.vaultproject.io/docs/[公式ドキュメント]
 
+link:https://dev.classmethod.jp/series/lets-try-vault/[やって覚えるVault – シリーズ –]
+
 == VaultとConsulのバージョン
 
 include::./ansible/inventories/group_vars/all.yml[]
