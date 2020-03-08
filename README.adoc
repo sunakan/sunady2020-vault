@@ -8,6 +8,9 @@ link:https://dev.classmethod.jp/series/lets-try-vault/[やって覚えるVault �
 
 include::./ansible/inventories/group_vars/all.yml[]
 
+* link:https://github.com/hashicorp/consul/releases[]
+* link:https://github.com/hashicorp/vault/releases[]
+
 == 起動してssh
 
 ----
