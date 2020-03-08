@@ -1,0 +1,3 @@
+= HashiCorpのGetting Started
+
+link:https://learn.hashicorp.com/vault[]
