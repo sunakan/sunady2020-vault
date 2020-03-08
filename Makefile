@@ -27,12 +27,16 @@ umikaze:
 # デバッグ用
 .PHONY: sync
 sync:
-	rsync -rtzv \
-	-e 'ssh -i .vagrant/machines/atago/virtualbox/private_key' \
-	--exclude '*.adoc' \
-	--exclude 'docs' \
-	--exclude '.*' \
-	--exclude 'Vagrantfile' \
-	--exclude 'Makefile' \
+	rsync \
+		--recursive \
+		--times \
+		--compress \
+		--verbose \
+		-e 'ssh -i .vagrant/machines/atago/virtualbox/private_key' \
+		--exclude '*.adoc' \
+		--exclude 'docs' \
+		--exclude '.*' \
+		--exclude 'Vagrantfile' \
+		--exclude './Makefile' \
 		./ \
 		vagrant@${ATAGO_IP}:/home/vagrant/
