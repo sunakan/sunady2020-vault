@@ -17,6 +17,22 @@ Vagrant.configure("2") do |config|
     end
   end
 
+  config.vm.define :ise do |machine|
+    machine.vm.hostname = "ise"
+    machine.vm.network "private_network", ip: "#{ENV['ISE_IP'] || '192.168.33.12'}"
+    machine.vm.provider :virtualbox do |vb|
+      vb.name = "ise"
+    end
+  end
+
+  config.vm.define :umikaze do |machine|
+    machine.vm.hostname = "umikaze"
+    machine.vm.network "private_network", ip: "#{ENV['UMIKAZE_IP'] || '192.168.33.13'}"
+    machine.vm.provider :virtualbox do |vb|
+      vb.name = "umikaze"
+    end
+  end
+
   config.vm.provision "ansible_local" do |ansible|
     ansible.playbook       = "/home/vagrant/ansible/main.yml"
     ansible.inventory_path = "/home/vagrant/ansible/inventories/hosts"
